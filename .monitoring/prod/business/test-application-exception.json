@@ -1,29 +1,32 @@
 {
-    "description": "Alarm for exceptions.",
-    "threshold": {
-        "value": 10,
-        "condition": "gte"
-    },
-    "queryConfiguration": {
-        "query": "app_name:hotel_engine AND type:exception",
-        "windowInSeconds": 300,
-        "aggregate": {
-            "type": "count",
-            "field": "*",
-            "percents": []
-        }
-    },
-    "notifications": {
-        "onError": [{
-            "type": "teams_message",
-            "template": "exceptions_failure"
-        },{
-            "type": "twilio_call",
-            "template": "exceptions_call"
-        }],
-        "onRecovery":[{
-            "type": "teams_message",
-            "template": "exceptions_recovery"
-        }]
-    }
+	"description": "added from postman333",
+	"friendlyname": "abc",
+	"threshold": {
+		"value": 10,
+		"condition": "lte"
+	},
+	"queryConfiguration": {
+		"query": "app_name:hotel_engine AND type:exception",
+		"index": "logs-*",
+		"windowInSeconds": 300,
+		"aggregate": {
+			"type": "Percentile",
+			"field": "*",
+			"percents": []
+		}
+	},
+	"notifications": {
+		"onError": [
+			{
+				"type": "teams_message",
+				"template": "failed_calls_failure"
+			}
+		],
+		"onRecovery": [
+			{
+				"type": "twilio_call",
+				"template": "failed_calls_failure"
+			}
+		]
+	}
 }
