@@ -12,7 +12,7 @@
 		"aggregate": {
 			"type": "Percentile",
 			"field": "*",
-			"percents": []
+			"percents": [10,20]
 		}
 	},
 	"notifications": {
@@ -25,7 +25,7 @@
 		"onRecovery": [
 			{
 				"type": "twilio_call",
-				"template": "failed_calls_failure"
+				"message": "failed_calls_failure"
 			}
 		]
 	}
