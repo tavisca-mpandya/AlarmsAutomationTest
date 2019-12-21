@@ -25,7 +25,7 @@
     "onRecovery": [
       {
         "type": "teams_message",
-        "message": "business_fault_recovery"
+        "template": "business_fault_recovery"
       }
     ]
   }
