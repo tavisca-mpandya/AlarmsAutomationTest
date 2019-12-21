@@ -1,0 +1,32 @@
+{
+  "description": "added from postman333",
+  "friendlyname": "Alamo exceptions",
+  "threshold": {
+    "value": 15,
+    "condition": "gte"
+  },
+  "queryConfiguration": {
+    "query": "app_name:connector_cars AND type:exception AND connector_id:alamo",
+    "index": "logs-*",
+    "windowInSeconds": 300,
+    "aggregate": {
+      "type": "Count",
+      "field": "*",
+      "percents": []
+    }
+  },
+  "notifications": {
+    "onError": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_failure"
+      }
+    ],
+    "onRecovery": [
+      {
+        "type": "teams_message",
+        "message": "business_fault_recovery"
+      }
+    ]
+  }
+}
