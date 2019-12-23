@@ -5,6 +5,7 @@
     "value": 15,
     "condition": "gte"
   },
+  "applicationName": "Car Connector",
   "queryConfiguration": {
     "query": "app_name:connector_cars AND type:exception AND connector_id:alamo",
     "index": "logs-*",
