@@ -11,7 +11,7 @@
 	},
 	"Id": "003jai7hhojy8",
 	"AlarmName": "b-hotelengine-exceptions",
-	"Description": null,
+	"Description": "Hotel engine exceptions",
 	"FriendlyName": "Hotel engine exceptions",
 	"Threshold": {
 		"Value": 10,
