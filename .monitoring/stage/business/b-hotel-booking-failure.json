@@ -11,7 +11,7 @@
 	},
 	"Id": "003jai7ggrqps",
 	"AlarmName": "b-hotel-booking-failure",
-	"Description": null,
+	"Description": "Booking Failure",
 	"FriendlyName": "Booking Failure",
 	"Threshold": {
 		"Value": 1,
