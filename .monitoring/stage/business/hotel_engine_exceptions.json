@@ -10,7 +10,6 @@
 		}
 	},
 	"Id": "003h53k53cikg",
-	"AlarmName": "hotel_engine_exceptions",
 	"Description": "Exceptions Alarm",
 	"FriendlyName": "Exceptions Alarm",
 	"Threshold": {

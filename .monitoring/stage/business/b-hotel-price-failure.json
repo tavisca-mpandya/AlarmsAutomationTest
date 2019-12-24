@@ -10,7 +10,6 @@
 		}
 	},
 	"Id": "003jai7foac5c",
-	"AlarmName": "b-hotel-price-failure",
 	"Description": "Price Failure",
 	"FriendlyName": "Price Failure",
 	"Threshold": {
