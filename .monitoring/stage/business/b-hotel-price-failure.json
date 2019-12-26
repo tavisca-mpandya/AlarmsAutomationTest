@@ -4,9 +4,9 @@
 		"Index": "logs-*",
 		"WindowInSeconds": 300,
 		"Aggregate": {
-			"Type": "count",
+			"Type": "percentile",
 			"Field": "*",
-			"Percents": []
+			"Percents": [90]
 		}
 	},
 	"Id": "003jai7foac5c",
