@@ -10,7 +10,7 @@
 		}
 	},
 	"Id": "003jai7ggrqps",
-	"Description": "Booking Failure",
+	"Description": "",
 	"FriendlyName": "Booking Failure",
 	"Threshold": {
 		"Value": 1,
