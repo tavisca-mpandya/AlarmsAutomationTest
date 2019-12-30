@@ -17,7 +17,7 @@
 		"Value": 10,
 		"Condition": "greaterthanequals"
 	},
-	"ApplicationName": "Hotel Engine",
+	"ApplicationName": "Test Application",
 	"Notifications": {
 		"OnError": [
 			{
