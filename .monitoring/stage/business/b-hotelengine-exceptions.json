@@ -2,7 +2,7 @@
 	"QueryConfiguration": {
 		"Query": "app_name:hotel_engine AND type:exception AND !tid:hhqgxrptds",
 		"Index": "logs-*",
-		"WindowInSeconds": 300,
+		"WindowInSeconds": 250,
 		"Aggregate": {
 			"Type": "count",
 			"Field": "*",
