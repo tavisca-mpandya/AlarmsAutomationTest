@@ -15,7 +15,7 @@
 	"FriendlyName": "Price Failure",
 	"Threshold": {
 		"Value": 10,
-		"Condition": "greaterthanequals"
+		"Condition": "gte"
 	},
 	"ApplicationName": "Test Application",
 	"Notifications": {
