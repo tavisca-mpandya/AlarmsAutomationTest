@@ -10,7 +10,7 @@
   "queryConfiguration": {
     "query": "app_name:hotel_engine AND verb:rooms_price AND status:failure",
     "index": "logs-*",
-    "windowInSeconds": 250,
+    "windowInSeconds": 300,
     "aggregate": {
       "type": "count",
       "field": "*"

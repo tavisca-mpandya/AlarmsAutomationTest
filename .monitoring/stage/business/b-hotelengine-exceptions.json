@@ -10,7 +10,7 @@
   "queryConfiguration": {
     "query": "app_name:hotel_engine AND type:exception AND !tid:hhqgxrptds",
     "index": "logs-*",
-    "windowInSeconds": 250,
+    "windowInSeconds": 300,
     "aggregate": {
       "type": "count",
       "field": "*"
