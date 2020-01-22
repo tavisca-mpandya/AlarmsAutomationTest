@@ -1,0 +1,33 @@
+{
+  "description": "Price Failure",
+  "friendlyName": "Price Failure",
+  "threshold": {
+    "condition": "gte",
+    "value": 10
+  },
+  "applicationName": "test application",
+  "environment": "stage",
+  "queryConfiguration": {
+    "query": "app_name:hotel_engine AND verb:rooms_price AND status:failure",
+    "index": "logs-*",
+    "windowInSeconds": 300,
+    "aggregate": {
+      "type": "count",
+      "field": "*"
+    }
+  },
+  "notifications": {
+    "onError": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_failure"
+      }
+    ],
+    "onRecovery": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_recovery"
+      }
+    ]
+  }
+}
