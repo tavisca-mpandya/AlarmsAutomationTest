@@ -1,35 +1,33 @@
 {
-	"QueryConfiguration": {
-		"Query": "app_name:hotel_engine AND category:book_status AND status:failure",
-		"Index": "logs-*",
-		"WindowInSeconds": 250,
-		"Aggregate": {
-			"Type": "count",
-			"Field": "*",
-			"Percents": []
-		}
-	},
-	"Id": "003jai7ggrqps",
-	"AlarmName": "b-hotel-booking-failure",
-	"Description": "Booking Failure",
-	"FriendlyName": "Booking Failure",
-	"Threshold": {
-		"Value": 1,
-		"Condition": "gte"
-	},
-	"ApplicationName": "Test Application",
-	"Notifications": {
-		"OnError": [
-			{
-				"Template": "business_fault_failure",
-				"Type": "teams_message"
-			}
-		],
-		"OnRecovery": [
-			{
-				"Template": "business_fault_recovery",
-				"Type": "teams_message"
-			}
-		]
-	}
+  "description": "Booking Failure",
+  "friendlyName": "Booking Failure",
+  "threshold": {
+    "condition": "gte",
+    "value": 1
+  },
+  "applicationName": "test application",
+  "environment": "stage",
+  "queryConfiguration": {
+    "query": "app_name:hotel_engine AND category:book_status AND status:failure",
+    "index": "logs-*",
+    "windowInSeconds": 250,
+    "aggregate": {
+      "type": "count",
+      "field": "*"
+    }
+  },
+  "notifications": {
+    "onError": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_failure"
+      }
+    ],
+    "onRecovery": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_recovery"
+      }
+    ]
+  }
 }

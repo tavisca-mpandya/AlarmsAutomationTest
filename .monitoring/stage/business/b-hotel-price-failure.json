@@ -1,35 +1,33 @@
 {
-	"QueryConfiguration": {
-		"Query": "app_name:hotel_engine AND verb:rooms_price AND status:failure",
-		"Index": "logs-*",
-		"WindowInSeconds": 250,
-		"Aggregate": {
-			"Type": "count",
-			"Field": "*",
-			"Percents": []
-		}
-	},
-	"Id": "003jai7foac5c",
-	"AlarmName": "b-hotel-price-failure",
-	"Description": "Price Failure",
-	"FriendlyName": "Price Failure",
-	"Threshold": {
-		"Value": 10,
-		"Condition": "gte"
-	},
-	"ApplicationName": "Test Application",
-	"Notifications": {
-		"OnError": [
-			{
-				"Template": "business_fault_failure",
-				"Type": "teams_message"
-			}
-		],
-		"OnRecovery": [
-			{
-				"Template": "business_fault_recovery",
-				"Type": "teams_message"
-			}
-		]
-	}
+  "description": "Price Failure",
+  "friendlyName": "Price Failure",
+  "threshold": {
+    "condition": "gte",
+    "value": 10
+  },
+  "applicationName": "test application",
+  "environment": "stage",
+  "queryConfiguration": {
+    "query": "app_name:hotel_engine AND verb:rooms_price AND status:failure",
+    "index": "logs-*",
+    "windowInSeconds": 250,
+    "aggregate": {
+      "type": "count",
+      "field": "*"
+    }
+  },
+  "notifications": {
+    "onError": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_failure"
+      }
+    ],
+    "onRecovery": [
+      {
+        "type": "teams_message",
+        "template": "business_fault_recovery"
+      }
+    ]
+  }
 }
